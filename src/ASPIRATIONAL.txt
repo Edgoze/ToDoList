@@ -1,0 +1,15 @@
+-I tried to have <textbox>s that adapted to the size of their content instead of <input>s of type
+text, but I wasn't able to make it work.
+
+
+
+
+DONE:
+-Have individual toDos get into editMode rather than the whole day section.
+    -Solved by using an array of objects rather than an array of Strings.
+
+-Could we simplify the code? Could we have a single state, a single addFunction, a single...? Tried but wasn't able to. I tested (Test.js) an attempt to access arrays inside an array
+as value for the state, but it didn't work.
+    -Solved. No need to have an array with arrays of objects as elements. All we need is to declare a single function for
+    each purpose, and give them different inputs depending on the day we are working with.
+        -Before this, each day had its own add, toggle, replace... functoins. See App.js

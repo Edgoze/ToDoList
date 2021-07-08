@@ -1,0 +1,42 @@
+.ToDo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+li.viewOnly {
+    font-family: rockwell;
+    font-size: 20px;
+    color: greenyellow;
+    /*Without the text-shadow the text is very hard to read on the clearer sections of the background pic
+    Also, the advantage of having a black shadow is that it doesn't show on the dark sections of the background pic.*/
+    text-shadow: 1px 1px 1px black;
+    text-decoration: underline;
+    /* This ensures that the button won't be pushed to the right when you write text more than one row large. */
+    max-width: 245px;
+    word-wrap: break-word;
+}
+
+button.fa-check-square:hover {
+    background-color: palegreen;
+    opacity: 0.85;
+}
+
+input.editor {
+    font-family: rockwell;
+    font-size: 20px;
+    text-decoration: underline;
+    color: greenyellow;
+    background-color: transparent;
+    text-shadow: 1px 1px 1px black;
+    /* For some reason text inputs automatically come with some padding. Remove that so that it doesn't 
+    look like they are to the left relative to the list elements in view mode.*/
+    padding: 0;
+    border: none;
+    /*When you click it, the blue border won't appear anymore.*/
+    outline: none;
+}
+
+button.fa-inbox:hover {
+    background-color: palegoldenrod;
+}

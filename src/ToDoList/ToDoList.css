@@ -1,0 +1,19 @@
+#ToDoList {
+    /* If this was height: 100%, it would be as tall as its container. AS TALL AS ITS CONTAINER (and btw, keep in mind that the container is as
+    tall as the grid cell that contains it), NOT the remaining space taking into account that the container has two elements, 
+    and this is one of them. That's why you want it to be shorter than its container. */
+    height: 81.5%;
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+}
+
+ul {
+    /* So that the To Dos have some space between each other*/
+    margin-top: 7px;
+}
+
+/* For when we have edit mode on (in which case we have a form rather than an ul)*/
+form {
+    margin-top: 7px;
+}
