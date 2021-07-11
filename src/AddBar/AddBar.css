@@ -1,34 +1,43 @@
-h1 {
+section.AddBar {
+    height: auto;
+}
+
+section.AddBar h1 {
     color: magenta;
-    /*Note the color choice for the shadow.*/
-    text-shadow: 1px 1px 1px yellow;
     font-family: Papyrus;
     font-size: 30px;
+    /*Note the color choice for the shadow.*/
+    text-shadow: 1px 1px 1px yellow;
     /* Papyrus is so tall that it overflows its box, so it's necessary to do this. */
     margin-top: 11px;
     /* Otherwise the bottom of papyrus letters touches the text input. */
-    margin-bottom: 3px;
+    margin-bottom: 7px;
 }
 
-form {
+section.AddBar form {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
-input.textField {
+section.AddBar form textarea {
     font-family: Georgia;
+    font-size: 18px;
     font-style: italic;
     opacity: 0.7;
+    width: 89.5%;
     color: orangered;
     background-color: lightcyan;
+    border: 2px solid rgb(17, 161, 218);
+    border-radius: 10%;
+    /*When you click it, the blue border won't appear anymore.*/
+    outline: none; 
+    /* This makes the resize corner disappear. */
+    resize: none;
+    /* This sets an initial height to the textarea. */
+    height: 33px;
 }
 
-/*This makes the box as a whole taller, which causes the input of type text to be taller too.*/
-button[type=submit] {
-    min-width: 33px;
-    min-height: 31px;
-}
-
-button[type=submit]:hover {
+section.AddBar form button:hover {
     background-color: salmon;
 }

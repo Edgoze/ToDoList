@@ -1,42 +1,68 @@
-.ToDo {
+/* I need to overcome the height: 100% from other sheets. */
+section.ToDo {
+    height: auto;
+}
+
+section.ToDo ul.ToDoContainer {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    /* So that the To Dos have some space between each other*/
+    margin-top: 7px;
 }
 
-li.viewOnly {
+section.ToDo form.ToDoContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 7px;
+}
+
+section.ToDo ul.ToDoContainer li.viewOnly {
     font-family: rockwell;
     font-size: 20px;
     color: greenyellow;
+    text-decoration: underline;
     /*Without the text-shadow the text is very hard to read on the clearer sections of the background pic
     Also, the advantage of having a black shadow is that it doesn't show on the dark sections of the background pic.*/
-    text-shadow: 1px 1px 1px black;
-    text-decoration: underline;
-    /* This ensures that the button won't be pushed to the right when you write text more than one row large. */
-    max-width: 245px;
+    text-shadow: -1px 2.5px 1px black;
+    /* This ensures that the text won't overflow when you have a single very large word. */
     word-wrap: break-word;
+    /* The text inside the textarea was making a small jump, but by giving the li and the textarea congruent line-heights that
+    went away. */
+    line-height: 23px;
+    /* For some reason when you have a single word, when you SHRINK the window horizontally the li element pushes the button
+    to the right and out of the parent container box. By making width 80%, there's some space between the li element and the
+    button, and hence the push doesn't begin until much later in the shrinking of the window. */
+    width: 80%;
 }
 
-button.fa-check-square:hover {
+section.ToDo ul.ToDoContainer button.fa-check-square:hover {
     background-color: palegreen;
     opacity: 0.85;
 }
 
-input.editor {
+section.ToDo form.ToDoContainer textarea {
     font-family: rockwell;
     font-size: 20px;
-    text-decoration: underline;
     color: greenyellow;
     background-color: transparent;
-    text-shadow: 1px 1px 1px black;
-    /* For some reason text inputs automatically come with some padding. Remove that so that it doesn't 
+    text-decoration: underline;
+    text-shadow: -1px 2.5px 1px black;
+    line-height: 23px;
+    width: 80%;
+    border: none;
+    resize: none;
+    outline: none;
+    /* For some reason textareas (and also text inputs btw) automatically come with some padding. Remove that so that it doesn't 
     look like they are to the left relative to the list elements in view mode.*/
     padding: 0;
-    border: none;
-    /*When you click it, the blue border won't appear anymore.*/
-    outline: none;
+    /* Since I couldn't figure out how to size the textarea according to the amount of text in it, I'm just going to
+    set the initial height of edit mode to three rows (which is a pretty reasonable size to cover any todo), and then
+    the textarea will automatically resize as the user types. */
+    height: 68px;    
 }
 
-button.fa-inbox:hover {
+section.ToDo form.ToDoContainer button.fa-inbox:hover {
     background-color: palegoldenrod;
 }

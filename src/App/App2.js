@@ -64,43 +64,43 @@ function App2() {
               index: index,
           };
         }
-        return element;
+          return element;
       })
     })
   }
 
   return (
-    <div id='app'>
+    <div className='app'>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
-      <section id='Monday'>
+      <section id='Monday' className='day'>
         <AddBar2 dayOfTheWeek='Monday' tasks={mondayTasks} stateSetter={mondayTasksSetter} addTask={addTask}/>
         <ToDoList2 tasks={mondayTasks} stateSetter={mondayTasksSetter} removeTask={removeTask} toggleEditMode={toggleEditMode} editer={editTask}/>
       </section>
-      <section id='Tuesday'>
+      <section id='Tuesday' className='day'>
         <AddBar2 dayOfTheWeek='Tuesday' tasks={tuesdayTasks} stateSetter={tuesdayTasksSetter} addTask={addTask}/>
         <ToDoList2 tasks={tuesdayTasks} stateSetter={tuesdayTasksSetter} removeTask={removeTask} toggleEditMode={toggleEditMode} editer={editTask}/>
       </section>
-      <section id='Wednesday'>
+      <section id='Wednesday' className='day'>
         <AddBar2 dayOfTheWeek='Wednesday' tasks={wednesdayTasks} stateSetter={wednesdayTasksSetter} addTask={addTask}/>
         <ToDoList2 tasks={wednesdayTasks} stateSetter={wednesdayTasksSetter} removeTask={removeTask} toggleEditMode={toggleEditMode} editer={editTask}/>
       </section>
-      <section id='Thursday'>
+      <section id='Thursday' className='day'>
         <AddBar2 dayOfTheWeek='Thursday' tasks={thursdayTasks} stateSetter={thursdayTasksSetter} addTask={addTask}/>
         <ToDoList2 tasks={thursdayTasks} stateSetter={thursdayTasksSetter} removeTask={removeTask} toggleEditMode={toggleEditMode} editer={editTask}/>
       </section>
-      <section id='Friday'>
+      <section id='Friday' className='day'>
         <AddBar2 dayOfTheWeek='Friday' tasks={fridayTasks} stateSetter={fridayTasksSetter} addTask={addTask}/>
         <ToDoList2 tasks={fridayTasks} stateSetter={fridayTasksSetter} removeTask={removeTask} toggleEditMode={toggleEditMode} editer={editTask}/>
        </section>
-      <section id='Saturday'>
+      <section id='Saturday' className='day'>
         <AddBar2 dayOfTheWeek='Saturday' tasks={saturdayTasks} stateSetter={saturdayTasksSetter} addTask={addTask}/>
         <ToDoList2 tasks={saturdayTasks} stateSetter={saturdayTasksSetter} removeTask={removeTask} toggleEditMode={toggleEditMode} editer={editTask}/>
       </section>
-      <section id='Sunday'>
+      <section id='Sunday' className='day'>
         <AddBar2 dayOfTheWeek='Sunday' tasks={sundayTasks} stateSetter={sundayTasksSetter} addTask={addTask}/>
         <ToDoList2 tasks={sundayTasks} stateSetter={sundayTasksSetter} removeTask={removeTask} toggleEditMode={toggleEditMode} editer={editTask}/>
       </section>
-      <section id='Atemporary'>
+      <section id='Atemporary' className='day'>
         <AddBar2 dayOfTheWeek='Atemporary' tasks={atemporaryTasks} stateSetter={atemporaryTasksSetter} addTask={addTask}/>
         <ToDoList2 tasks={atemporaryTasks} stateSetter={atemporaryTasksSetter} removeTask={removeTask} toggleEditMode={toggleEditMode} editer={editTask}/>
       </section> 

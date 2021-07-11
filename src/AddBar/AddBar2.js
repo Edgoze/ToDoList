@@ -10,29 +10,34 @@ function AddBar2(props) {
             target.value = '';
         }
     }
+    function auto_grow(event){
+        event.target.style.height = "5px";
+        event.target.style.height = (event.target.scrollHeight)+"px";
+    }
     //I'm using event rather than {target} because I need to use event.preventDefault()
     function handleSubmit(event) {
         event.preventDefault();
         let newToDoObject = {
-            text: event.target.querySelector('input[type = "text"]').value,
+            text: event.target.querySelector('textarea').value,
             editMode: false,
             //Note this little smart move.
             index: props.tasks.length,
         }
         props.addTask(props.stateSetter, newToDoObject);
-        //After you submit, this will make the text input read 'Type here!' again.
-        event.target.querySelector('input[type = "text"]').value = 'Type here!';
+        //After you submit, this will make the textarea read 'Type here!' again.
+        event.target.querySelector('textarea').value = 'Type here!';
+        //After you submit, this will make the textarea go back to its initial height.
+        event.target.querySelector('textarea').style.height = "33px";
     }
     return (
-        <div id='AddBar'>
+        <section className='AddBar'>
             <h1>{props.dayOfTheWeek}</h1>
             <form onSubmit={handleSubmit}>
-                {/* The size attribute allows us to make inputs of type 'text' longer (as in horizontally longer) */}
                 {/* From what I've seen, buttons of type submit work the same as inputs of type submit. */}
-                <input className='textField' type='text' defaultValue='Type here!' size='33' onClick={handleClick}></input>
+                <textarea defaultValue='Type here!' onClick={handleClick} onKeyPress={auto_grow} onKeyUp={auto_grow}></textarea>
                 <button className='fa fa-plus' type='submit'></button>
             </form>
-        </div>
+        </section>
     )
 }
 

@@ -4,39 +4,48 @@ e.g., if in index.css I give #app a backgorund color of red, indeed #app will ha
 /* Not only that, but curiously enough even CHILDREN CSS files can have an impact on other files. It seems to me
 that the right way to think about this is that all the CSS sheets merge into a single one.*/
 
+
+
 * {
   box-sizing: border-box;
 }
 
-#app {
+div.app {
   height: 100%;
   display: grid;
-  grid-template-areas: "Monday Tuesday Wednesday Thursday Friday"
-                       "Saturday Sunday Atemporary Pic Pic";
+  grid-template-areas: "Monday Tuesday Wednesday Thursday"
+                       "Friday Saturday Sunday Atemporary";
   /* For some reason using relative measures here doesn't work: if I add tasks, the boxes move around. */
   /* However, giving these things absolute measures makes me unable to set a %wise height to #app, so they'll have to go away. */
   /* grid-template-columns: repeat(5, 286px);
   grid-template-rows: repeat(2, 410px); */
   /* For some reason if you use fr rather than %, if you add enough tasks for things to overflow, things WON'T overflow, but rather
   will push the box below or above it for more space ("the boxes move around"). If, however, you use %, this doesn't happen. */
-  /* Also, I had to make them 19.5% rather than 20% and 49% rather than 50% for me to be able to set up a grid-gap and hence have some 
+  /* Also, I had to make them 24% rather than 25% and 49% rather than 50% for me to be able to set up a grid-gap and hence have some 
   space between the edges of the window and my stuff. */
-  grid-template-columns: repeat(5, 19.5%);
+  grid-template-columns: repeat(4, 24%);
   grid-template-rows: repeat(2, 49%);
   grid-gap: 5px;
   align-content: center;
   justify-content: center;
-  background-image: url('./forrest.jpg');
+  background-image: url('./Images/forrest.jpg');
   background-size: cover;
   opacity: 0.8;
 }
 
-section {
+div.app section.day {
   /* Note that this 100% is not 100% of #app, but rather 100% of the cell that contains the <section> in the grid. */
   height: 100%;
+  /* Note that you don't need display: flex to use overflow */
+  overflow: scroll;
 }
 
 /*This will apply to all buttons in the program.*/
 button {
-  background-color: lavender;
+  background-color: rgb(208, 208, 255);
+  border-radius: 10%;
+  min-width: 33px;
+  min-height: 31px;
+  max-width: 33px;
+  max-height: 31px;
 }
