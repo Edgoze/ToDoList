@@ -1,3 +1,7 @@
+I would have liked to have animations when the components mount, but it's too time-conusming and not that important, so it's
+at the bottom of my priority list, and also for some reason I can't install the react-spring library.
+
+
 DONE:
 -Have individual toDos get into editMode rather than the whole day section.
     -Solved by using an array of objects rather than an array of Strings.

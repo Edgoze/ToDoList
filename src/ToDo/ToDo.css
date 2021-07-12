@@ -35,6 +35,11 @@ section.ToDo ul.ToDoContainer li.viewOnly {
     to the right and out of the parent container box. By making width 80%, there's some space between the li element and the
     button, and hence the push doesn't begin until much later in the shrinking of the window. */
     width: 80%;
+    transition: color 0.5s ease-out;
+}
+
+section.ToDo ul.ToDoContainer li.viewOnly:hover {
+    color: orangered;
 }
 
 section.ToDo ul.ToDoContainer button.fa-check-square:hover {

@@ -48,4 +48,5 @@ button {
   min-height: 31px;
   max-width: 33px;
   max-height: 31px;
+  transition: background-color 0.5s ease-out;
 }
