@@ -30,12 +30,18 @@ section.AddBar form textarea {
     background-color: lightcyan;
     border: 2px solid rgb(17, 161, 218);
     border-radius: 10%;
+    transition: background-color 1s, color 1s;
     /*When you click it, the blue border won't appear anymore.*/
     outline: none; 
     /* This makes the resize corner disappear. */
     resize: none;
     /* This sets an initial height to the textarea. */
     height: 33px;
+}
+
+section.AddBar form textarea {
+    background-color: gray;
+    color: yellow;
 }
 
 section.AddBar form button:hover {
