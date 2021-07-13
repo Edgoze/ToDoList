@@ -39,7 +39,7 @@ section.AddBar form textarea {
     height: 33px;
 }
 
-section.AddBar form textarea {
+section.AddBar form textarea:hover {
     background-color: gray;
     color: yellow;
 }
